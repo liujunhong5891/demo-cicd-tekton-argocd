@@ -8,9 +8,9 @@ spec:
   - list:
       elements:
       - runtime: pipeline1-runtime
-        clusterURL: https://192.168.0.184:31543
+        clusterURL: https://192.168.0.243:31543
       - runtime: deployment1-runtime
-        clusterURL: https://192.168.0.184:31544
+        clusterURL: https://192.168.0.243:31544
   template:
     metadata:
       name: '{{runtime}}'
@@ -18,7 +18,7 @@ spec:
     spec:
       project: demo-vcluster
       source:
-        repoURL: https://github.com/lanbingcloud/demo-cicd-tekton-argocd.git
+        repoURL: https://github.com/liujunhong5891/demo-cicd-tekton-argocd.git
         targetRevision: HEAD
         path: runtimes/{{runtime}}
       destination:

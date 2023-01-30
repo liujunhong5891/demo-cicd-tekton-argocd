@@ -6,7 +6,7 @@ metadata:
   namespace: argo-events
 spec:
   rules:
-  - host: webhook.pipeline1.119-8-58-20.nip.io
+  - host: webhook.pipeline1.119-8-99-179.nip.io
     http:
       paths:
       - path: /

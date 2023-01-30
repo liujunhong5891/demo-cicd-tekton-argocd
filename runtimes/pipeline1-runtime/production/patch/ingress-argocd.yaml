@@ -7,7 +7,7 @@ metadata:
     cert-manager.io/cluster-issuer: org-issuer
 spec:
   rules:
-  - host: argocd.pipeline1.119-8-58-20.nip.io
+  - host: argocd.pipeline1.119-8-99-179.nip.io
     http:
       paths:
       - path: /
@@ -19,5 +19,5 @@ spec:
               name: https
   tls:
   - hosts:
-    - argocd.pipeline1.119-8-58-20.nip.io
+    - argocd.pipeline1.119-8-99-179.nip.io
     secretName: argocd-cert

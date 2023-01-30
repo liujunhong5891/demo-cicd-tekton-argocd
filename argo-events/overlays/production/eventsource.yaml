@@ -7,14 +7,14 @@ spec:
   github:
     user-project:
       repositories:
-        - owner: lanbingcloud
+        - owner: liujunhong5891
           names:
             - demo-user-project
       webhook:
         endpoint: /user-project
         port: "12000"
         method: POST
-        url: http://webhook.pipeline1.119-8-58-20.nip.io:30080
+        url: http://webhook.pipeline1.119-8-99-179.nip.io:30080
       events:
         - "push"
       apiToken:

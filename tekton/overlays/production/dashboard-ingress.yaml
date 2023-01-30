@@ -6,7 +6,7 @@ metadata:
   namespace: tekton-pipelines
 spec:
   rules:
-  - host: tekton.pipeline1.119-8-58-20.nip.io
+  - host: tekton.pipeline1.119-8-99-179.nip.io
     http:
       paths:
       - path: /
