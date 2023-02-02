@@ -11,7 +11,7 @@ spec:
   project: demo-deployment
   source:
     path: deployments/test
-    repoURL: https://github.com/lanbingcloud/demo-user-deployments.git
+    repoURL: https://github.com/liujunhong5891/demo-user-deployments.git
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
