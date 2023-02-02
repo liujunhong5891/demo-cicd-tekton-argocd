@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: demo-pipeline
+  project: demo-deployment
   source:
     chart: vault
     repoURL: https://helm.releases.hashicorp.com/
