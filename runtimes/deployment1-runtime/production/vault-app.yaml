@@ -17,7 +17,7 @@ spec:
           enabled: false
         injector:
           enabled: true
-          authPath: auth/pipeline1-cluster
+          authPath: auth/deployment1-cluster
           externalVaultAddr: http://192.168.0.243:31820
   destination:
     server: https://kubernetes.default.svc
