@@ -9,6 +9,13 @@ metadata:
     notifications.argoproj.io/subscribe.on-deployed.deployments-status: ""
 spec:
   project: demo-deployment
+  ignoreDifferences:
+    - group: apps
+      kind: Service
+      name: ks-sample-dev
+      namespace: user-deployments
+      jsonPointers:
+        - /spec/ports/nodePort
   source:
     path: deployments/test
     repoURL: https://github.com/liujunhong5891/demo-user-deployments.git
