@@ -15,7 +15,7 @@ spec:
           service:
             name: webhook-eventsource
             port:
-              number: 14000  # 暂时更新端口为14000，验证webhook
+              number: 12000  
 ---
 apiVersion: v1
 kind: Service
@@ -24,8 +24,8 @@ metadata:
   namespace: user-pipelines
 spec:
   ports:
-  - port: 14000   # 暂时更新端口为14000，验证webhook
+  - port: 12000   
     protocol: TCP
-    targetPort: 14000   # 暂时更新端口为14000，验证webhook
+    targetPort: 12000  
   selector:
     eventsource-name: webhook
