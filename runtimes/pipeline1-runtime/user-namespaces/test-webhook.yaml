@@ -4,12 +4,39 @@ metadata:
   name: test-webhook
   namespace: user-pipelines
 spec:
-  service:
-    ports:
-      - port: 13000
-        targetPort: 13000
   webhook:
     example:
       port: "13000"
       endpoint: /example
       method: POST
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-webhook-eventsource
+  namespace: user-pipelines
+spec:
+  ports:
+  - port: 13000   
+    protocol: TCP
+    targetPort: 13000  
+  selector:
+    eventsource-name: test-webhook
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webhook-eventsource
+  namespace: user-pipelines
+spec:
+  rules:
+  - host: test-webhook.pipeline1.119-8-99-179.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: test-webhook-eventsource
+            port:
+              number: 13000  
