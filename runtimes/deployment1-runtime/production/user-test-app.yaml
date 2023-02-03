@@ -18,7 +18,7 @@ spec:
     namespace: user-deployments
   syncPolicy:
     automated:
-      selfHeal: false   # 禁用健康检查
+      selfHeal: true   
       prune: true
     syncOptions:
       - CreateNamespace=true
