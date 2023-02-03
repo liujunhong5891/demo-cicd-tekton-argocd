@@ -15,7 +15,8 @@ spec:
       name: ks-sample-dev
       namespace: user-deployments
       jqPathExpressions:
-        - .spec.ports[]
+        # - .spec.ports[]
+        - .spec.ports[] | select(.nodePort == 32000)
   source:
     path: deployments/test
     repoURL: https://github.com/liujunhong5891/demo-user-deployments.git
