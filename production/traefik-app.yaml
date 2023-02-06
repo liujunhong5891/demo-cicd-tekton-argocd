@@ -26,6 +26,7 @@ spec:
           kubernetesIngress:
             publishedService:
               enabled: true
+            ip: 119.8.99.179
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
